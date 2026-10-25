@@ -12,17 +12,19 @@ export const signupUser = async (req, res) =>{
         let userExist = await user.findOne({
             email : email
         });
+        console.log('Outside userExist');
 
         if(userExist){
             console.log("User already exists");
         }
-        else{
-            console.log("User Doesnot exist");
-        }
+        // else{
+        //     console.log("User Doesnot exist");
+        // }
+        
 
         const hashedpassword = await bcrypt.hash(password, 10);
 
-        await User.create({
+        await user.create({
             name : name,
             email : email,
             password : hashedpassword

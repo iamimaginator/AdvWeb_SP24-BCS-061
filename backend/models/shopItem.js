@@ -19,7 +19,6 @@ const shopItemSchema = new mongoose.Schema(
         },
         category: {
             type: String,
-            enum: ["skin", "trail_effect", "upgrade"],
             required: true
         },
         priceCoins: {
@@ -31,9 +30,13 @@ const shopItemSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        modifiers: {
-            speedMultiplier: { type: Number, default: 1.0 },
-            extraJumps: { type: Number, default: 0 }
+        speedMultiplier: {
+            type: Number,
+            default: 1.0
+        },
+        extraJumps: {
+            type: Number,
+            default: 0
         },
         isAvailable: {
             type: Boolean,

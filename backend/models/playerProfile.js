@@ -3,11 +3,9 @@ import mongoose from "mongoose";
 const playerProfileSchema = new mongoose.Schema(
     {
         user: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "User",
+            type: String,
             required: true,
-            unique: true,
-            index: true
+            unique: true
         },
         displayName: {
             type: String,
@@ -30,24 +28,34 @@ const playerProfileSchema = new mongoose.Schema(
             default: 0,
             min: 0
         },
-        stats: {
-            totalScore: { type: Number, default: 0, min: 0 },
-            totalDeaths: { type: Number, default: 0, min: 0 },
-            totalEnemiesDefeated: { type: Number, default: 0, min: 0 },
-            totalPlayTimeSeconds: { type: Number, default: 0, min: 0 }
+        totalScore: {
+            type: Number,
+            default: 0,
+            min: 0
         },
-        unlockedItems: [
-            {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: "ShopItem"
-            }
-        ],
-        unlockedAchievements: [
-            {
-                achievement: { type: mongoose.Schema.Types.ObjectId, ref: "Achievement" },
-                unlockedAt: { type: Date, default: Date.now }
-            }
-        ]
+        totalDeaths: {
+            type: Number,
+            default: 0,
+            min: 0
+        },
+        totalEnemiesDefeated: {
+            type: Number,
+            default: 0,
+            min: 0
+        },
+        totalPlayTimeSeconds: {
+            type: Number,
+            default: 0,
+            min: 0
+        },
+        unlockedItems: {
+            type: [String], // List of ShopItem itemCodes
+            default: []
+        },
+        unlockedAchievements: {
+            type: [String], // List of Achievement codes
+            default: []
+        }
     },
     { timestamps: true }
 );

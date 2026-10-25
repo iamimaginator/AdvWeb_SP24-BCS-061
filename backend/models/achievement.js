@@ -24,7 +24,6 @@ const achievementSchema = new mongoose.Schema(
         },
         conditionType: {
             type: String,
-            enum: ["TOTAL_COINS", "ZERO_DEATH_CLEAR", "SPEEDRUN_PAR", "TOTAL_LEVELS_CLEARED"],
             required: true
         },
         thresholdValue: {
@@ -40,4 +39,4 @@ const achievementSchema = new mongoose.Schema(
     { timestamps: true }
 );
 
-export default mongoose.model("Achievement", achievementSchema);
+export default mongoose.model("Achievement", achievementSchema); 

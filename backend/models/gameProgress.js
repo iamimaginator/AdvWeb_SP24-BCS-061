@@ -3,13 +3,11 @@ import mongoose from "mongoose";
 const gameProgressSchema = new mongoose.Schema(
     {
         user: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "User",
+            type: String,
             required: true
         },
         level: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Level",
+            type: String,
             required: true
         },
         isUnlocked: {
@@ -51,10 +49,17 @@ const gameProgressSchema = new mongoose.Schema(
             default: 0,
             min: 0
         },
-        lastCheckpoint: {
-            checkpointId: { type: String, default: null },
-            x: { type: Number, default: null },
-            y: { type: Number, default: null }
+        checkpointId: {
+            type: String,
+            default: null
+        },
+        checkpointX: {
+            type: Number,
+            default: null
+        },
+        checkpointY: {
+            type: Number,
+            default: null
         }
     },
     { timestamps: true }

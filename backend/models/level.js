@@ -15,7 +15,6 @@ const levelSchema = new mongoose.Schema(
         },
         difficulty: {
             type: String,
-            enum: ["easy", "medium", "hard", "nightmare"],
             default: "easy"
         },
         parTimeMs: {
@@ -23,10 +22,17 @@ const levelSchema = new mongoose.Schema(
             required: true,
             min: 1000
         },
-        starThresholds: {
-            oneStarScore: { type: Number, default: 100 },
-            twoStarScore: { type: Number, default: 500 },
-            threeStarScore: { type: Number, default: 1000 }
+        oneStarScore: {
+            type: Number,
+            default: 100
+        },
+        twoStarScore: {
+            type: Number,
+            default: 500
+        },
+        threeStarScore: {
+            type: Number,
+            default: 1000
         },
         maxCoins: {
             type: Number,
