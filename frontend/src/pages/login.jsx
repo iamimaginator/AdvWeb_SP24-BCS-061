@@ -34,24 +34,33 @@ export default function Login() {
     };
 
     return (
-        <div className="login">
-            <h1>You are on the Login Page!</h1>
-            <h2>Please Sign In</h2>
-            <form className="login-form" onSubmit={handleSubmit}>
-                <label htmlFor="email">Email:</label>
-                <input type="email" id="email" name="email" required
-                    value={email} onChange={(e) => setEmail(e.target.value)} />
+        <div className="login-container">
+            <div className="login-card">
+                <h1 className="login-title">Welcome Back</h1>
+                <p className="login-subtitle">Please sign in to your account</p>
 
-                <label htmlFor="password">Password:</label>
-                <input type="password" id="password" name="password" required
-                    value={password} onChange={(e) => setPassword(e.target.value)} />
+                <form className="login-form" onSubmit={handleSubmit}>
+                    <div className="form-group">
+                        <label htmlFor="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required
+                            value={email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
 
-                <button type="submit">Login</button>
-            </form>
-            <p className="message">{message}</p>
-            <p>
-                Don't have an account? <Link to="/signup">Signup</Link>
-            </p>
+                    <div className="form-group">
+                        <label htmlFor="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required
+                            value={password} onChange={(e) => setPassword(e.target.value)} />
+                    </div>
+
+                    <button type="submit" className="login-btn">Login</button>
+                </form>
+
+                {message && <p className="message">{message}</p>}
+
+                <p className="login-footer">
+                    Don't have an account? <Link to="/signup">Signup</Link>
+                </p>
+            </div>
         </div>
     );
 }

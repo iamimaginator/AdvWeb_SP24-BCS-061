@@ -1,32 +1,118 @@
-.login {
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     padding: 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
     text-align: center;
+}
+
+.login-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+
+.login-subtitle {
+    font-size: 14px;
+    color: #888;
+    margin: 0 0 32px;
 }
 
 .login-form {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    margin: 20px auto;
+    gap: 20px;
     text-align: left;
 }
 
-.login-form label {
-    margin-top: 10px;
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
-.login-form input {
-    padding: 6px;
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-group input {
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #666;
+}
+
+.form-group input::placeholder {
+    color: #555;
+}
+
+.login-btn {
     margin-top: 4px;
-    border: 1px solid #999;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    transition: border-color 0.2s;
 }
 
-.login-form button {
-    margin-top: 15px;
-    padding: 8px;
-    cursor: pointer;
+.login-btn:hover {
+    border-color: #DE7356;
+    color: #DE7356;
 }
 
 .message {
-    color: red;
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 16px;
+}
+
+.login-footer {
+    font-size: 14px;
+    margin-top: 24px;
+    color: #888;
+}
+
+.login-footer a {
+    color: #DE7356;
+    text-decoration: underline;
+}
+
+.login-footer a:hover {
+    color: #e8957e;
+}
+
+@media (max-width: 480px) {
+    .login-title {
+        font-size: 24px;
+    }
+
+    .login-subtitle {
+        font-size: 13px;
+    }
+
+    .form-group input,
+    .login-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
 }
