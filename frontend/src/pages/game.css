@@ -1,0 +1,18 @@
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.game button {
+    padding: 12px 40px;
+    font-size: 20px;
+    cursor: pointer;
+}

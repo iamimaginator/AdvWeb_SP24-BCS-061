@@ -1,0 +1,26 @@
+.signup {
+    padding: 20px;
+    text-align: center;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 20px auto;
+}
+
+.signup-form input {
+    padding: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #999;
+}
+
+.signup-form button {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.message {
+    color: red;
+}

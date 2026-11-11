@@ -1,0 +1,32 @@
+.login {
+    padding: 20px;
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.login-form label {
+    margin-top: 10px;
+}
+
+.login-form input {
+    padding: 6px;
+    margin-top: 4px;
+    border: 1px solid #999;
+}
+
+.login-form button {
+    margin-top: 15px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.message {
+    color: red;
+}

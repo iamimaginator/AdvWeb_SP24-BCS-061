@@ -1,0 +1,11 @@
+.product {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-info {
+    width: 300px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #999;
+}
